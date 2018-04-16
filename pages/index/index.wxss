@@ -1,0 +1,50 @@
+.nav-bar {
+  display: flex;
+  font-size: 35rpx;
+  line-height: 49rpx;
+}
+
+.news-type {
+  margin: 19rpx;
+}
+
+.news-list {
+
+}
+
+.list-item {
+  display: flex;
+  margin: 19rpx;
+  padding: 20rpx 0rpx;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.item-text {
+  margin-right: 5rpx;
+}
+
+.title {
+  font-size: 35rpx;
+  opacity: 0.8;
+}
+
+.source-and-date {
+  display: flex;
+  font-size: 25rpx;
+  opacity: 0.5;
+}
+
+.source {
+  margin: 10rpx 10rpx 10rpx 0rpx
+}
+
+.date {
+  margin: 10rpx;
+}
+
+.first-image {
+  width:275rpx;
+  height: 135rpx;
+  border-radius: 5rpx;
+  margin-left: 5rpx;
+}
