@@ -8,55 +8,19 @@
   <view class='news-type'>其他</view>
 </view>
 
-<view class="news-list">
+<view class="news-list" wx:for="{{newsList}}" wx:key="{{item.id}}">
   <view class="list-item">
     <view class="item-text">
-      <view class="title">天宫一号8时15分已再入大气层 落区为南太平洋中部</view>
+      <view class="title">{{item.title}}</view>
       <view class="source-and-date">
-        <view class="source">新华网</view>
-        <view class="date">09:44</view>
+        <view class="source">{{item.source ? item.source : "未知来源"}}</view>
+        <view class="date">08:40</view>
       </view>
     </view>
-    <image class="first-image" src="http://inews.gtimg.com/newsapp_bt/0/3164516562/641"></image>
-  </view>
-  <view class="list-item">
-    <view class="item-text">
-      <view class="title">天宫一号8时15分已再入大气层 落区为南太平洋中部</view>
-      <view class="source-and-date">
-        <view class="source">新华网</view>
-        <view class="date">09:44</view>
-      </view>
-    </view>
-    <image class="first-image" src="http://inews.gtimg.com/newsapp_bt/0/3164516562/641"></image>
-  </view>
-  <view class="list-item">
-    <view class="item-text">
-      <view class="title">天宫一号8时15分已再入大气层 落区为南太平洋中部</view>
-      <view class="source-and-date">
-        <view class="source">新华网</view>
-        <view class="date">09:44</view>
-      </view>
-    </view>
-    <image class="first-image" src="http://inews.gtimg.com/newsapp_bt/0/3164516562/641"></image>
-  </view>
-  <view class="list-item">
-    <view class="item-text">
-      <view class="title">天宫一号8时15分已再入大气层 落区为南太平洋中部</view>
-      <view class="source-and-date">
-        <view class="source">新华网</view>
-        <view class="date">09:44</view>
-      </view>
-    </view>
-    <image class="first-image" src="http://inews.gtimg.com/newsapp_bt/0/3164516562/641"></image>
-  </view>
-  <view class="list-item">
-    <view class="item-text">
-      <view class="title">天宫一号8时15分已再入大气层 落区为南太平洋中部</view>
-      <view class="source-and-date">
-        <view class="source">新华网</view>
-        <view class="date">09:44</view>
-      </view>
-    </view>
-    <image class="first-image" src="http://inews.gtimg.com/newsapp_bt/0/3164516562/641"></image>
+    <image
+      class="first-image"
+      src="{{item.firstImage}}"
+      mode="aspectFill" 
+    />
   </view>
 </view>

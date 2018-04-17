@@ -1,50 +1,52 @@
 .nav-bar {
   display: flex;
+  justify-content: space-between;
   font-size: 35rpx;
   line-height: 49rpx;
-}
-
-.news-type {
-  margin: 19rpx;
+  margin: 20rpx 35rpx;
 }
 
 .news-list {
-
+  margin: 0 35rpx;
 }
 
 .list-item {
   display: flex;
-  margin: 19rpx;
+  justify-content: space-between;
+  height: 150rpx;
   padding: 20rpx 0rpx;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .item-text {
-  margin-right: 5rpx;
+  width: 450rpx;
 }
 
 .title {
-  font-size: 35rpx;
+  font-size: 30rpx;
+  line-height: 42.rpx;
   opacity: 0.8;
+  margin-bottom: 5rpx;
 }
 
 .source-and-date {
   display: flex;
   font-size: 25rpx;
+  line-height: 35rpx;
   opacity: 0.5;
+  margin-top: 15rpx;
 }
 
 .source {
-  margin: 10rpx 10rpx 10rpx 0rpx
+  margin-right: 15rpx;
 }
 
 .date {
-  margin: 10rpx;
+  margin-left: 15rpx;
 }
 
 .first-image {
-  width:275rpx;
-  height: 135rpx;
+  width: 200rpx;
+  height: 130rpx;
   border-radius: 5rpx;
-  margin-left: 5rpx;
 }
