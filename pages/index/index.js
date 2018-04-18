@@ -6,7 +6,7 @@ Page({
     wx.request({
       url: 'https://test-miniprogram.com/api/news/list',
       data: {
-        type: 'gn'
+        type: 'other'
       },
       success: res => {
         console.log(res.data.result)
@@ -16,6 +16,5 @@ Page({
         })
       }
     })
-
   }
 })

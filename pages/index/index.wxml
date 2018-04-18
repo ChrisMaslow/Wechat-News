@@ -1,3 +1,11 @@
+<!--定义util.getTime来截取字符串-->
+<wxs module="util">
+  var getTime = function(date) {
+    return date.substring(11, 16)
+  }
+  module.exports.getTime = getTime;
+</wxs>
+
 <view class="nav-bar">
   <view class='news-type'>国内</view>
   <view class='news-type'>国际</view>
@@ -14,12 +22,19 @@
       <view class="title">{{item.title}}</view>
       <view class="source-and-date">
         <view class="source">{{item.source ? item.source : "未知来源"}}</view>
-        <view class="date">08:40</view>
+        <view class="date">{{util.getTime(item.date)}}</view>
       </view>
     </view>
     <image
+      wx:if="{{item.firstImage}}"
       class="first-image"
       src="{{item.firstImage}}"
+      mode="aspectFill" 
+    />
+    <image
+      wx:else
+      class="first-image"
+      src="/images/img_not_available.png"
       mode="aspectFill" 
     />
   </view>
