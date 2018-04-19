@@ -56,18 +56,25 @@ Page({
     })
   },
 
-  onTapNewsType(e) {
-    const { type } = e.currentTarget.dataset
-    this.getNewsList(type)
+  changeType(type) {
+    this.setData({
+      showingType: type
+    })
   },
 
-  onTapNewsList() {
-    wx.showToast()
+  onTapNewsType(e) {
+    const { type } = e.currentTarget.dataset
+    this.changeType(type)
+    this.getNewsList(type)
   },
 
   onPullDownRefresh() {
     const { showingType } = this.data
     this.getNewsList(showingType)
     wx.stopPullDownRefresh()
+  },
+
+  onTapNewsList() {
+    wx.showToast()
   }
 })
