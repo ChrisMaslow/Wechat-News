@@ -1,4 +1,4 @@
-<!--定义util.getTime来截取字符串-->
+<!--定义util.getTime来获取时间-->
 <wxs module="util">
   var getTime = function(date) {
     return date.substring(11, 16)
@@ -7,18 +7,20 @@
 </wxs>
 
 <view class="nav-bar">
-  <view class='news-type'>国内</view>
-  <view class='news-type'>国际</view>
-  <view class='news-type'>财经</view>
-  <view class='news-type'>娱乐</view>
-  <view class='news-type'>军事</view>
-  <view class='news-type'>体育</view>
-  <view class='news-type'>其他</view>
+  <view 
+    class='news-type'
+    wx:for="{{newsType}}"
+    wx:key="{{item.type}}"
+    data-type="{{item.type}}"
+    bindtap='onTapNewsType'
+  >
+    {{item.name}}
+  </view>
 </view>
 
-<view class="news-list" wx:for="{{newsList}}" wx:key="{{item.id}}">
-  <view class="list-item">
-    <view class="item-text">
+<block class="news-list" wx:for="{{newsList}}" wx:key="{{item.id}}">
+  <view class="news-item" bindtap='onTapNewsList'>
+    <view class="news-text">
       <view class="title">{{item.title}}</view>
       <view class="source-and-date">
         <view class="source">{{item.source ? item.source : "未知来源"}}</view>
@@ -38,4 +40,4 @@
       mode="aspectFill" 
     />
   </view>
-</view>
+</block>

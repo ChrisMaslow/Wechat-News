@@ -6,19 +6,16 @@
   margin: 20rpx 35rpx;
 }
 
-.news-list {
-  margin: 0 35rpx;
-}
-
-.list-item {
+.news-item {
   display: flex;
   justify-content: space-between;
   height: 150rpx;
   padding: 20rpx 0rpx;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0 35rpx;
 }
 
-.item-text {
+.news-text {
   width: 450rpx;
 }
 
