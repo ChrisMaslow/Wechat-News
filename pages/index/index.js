@@ -30,11 +30,14 @@ Page({
         type: "other"
       }
     ],
+    noImage: "/images/img_not_available.png",
+    showingType: "gn",
     newsList: []
   },
 
   onLoad() {
-    this.getNewsList("gn")
+    const {showingType} = this.data
+    this.getNewsList(showingType)
   },
 
   getNewsList(type) {
@@ -60,5 +63,11 @@ Page({
 
   onTapNewsList() {
     wx.showToast()
+  },
+
+  onPullDownRefresh() {
+    const { showingType } = this.data
+    this.getNewsList(showingType)
+    wx.stopPullDownRefresh()
   }
 })

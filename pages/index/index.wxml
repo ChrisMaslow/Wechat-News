@@ -28,15 +28,8 @@
       </view>
     </view>
     <image
-      wx:if="{{item.firstImage}}"
       class="first-image"
-      src="{{item.firstImage}}"
-      mode="aspectFill" 
-    />
-    <image
-      wx:else
-      class="first-image"
-      src="/images/img_not_available.png"
+      src="{{item.firstImage ? item.firstImage : noImage}}"
       mode="aspectFill" 
     />
   </view>
