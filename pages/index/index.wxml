@@ -21,10 +21,10 @@
 <block class="news-list" wx:for="{{newsList}}" wx:key="{{item.id}}">
   <view class="news-item" bindtap='onTapNewsList'>
     <view class="news-text">
-      <view class="title">{{item.title}}</view>
+      <text class="title">{{item.title}}</text>
       <view class="source-and-date">
-        <view class="source">{{item.source ? item.source : "未知来源"}}</view>
-        <view class="date">{{util.getTime(item.date)}}</view>
+        <text class="source">{{item.source ? item.source : "未知来源"}}</text>
+        <text class="date">{{util.getTime(item.date)}}</text>
       </view>
     </view>
     <image

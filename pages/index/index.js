@@ -75,6 +75,8 @@ Page({
   },
 
   onTapNewsList() {
-    wx.showToast()
+    wx.navigateTo({
+      url: '/pages/detail/detail',
+    })
   }
 })

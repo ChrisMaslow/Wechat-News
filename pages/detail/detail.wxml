@@ -1,2 +1,26 @@
-<!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view class="title">{{newsDetail.title}}</view>
+<view class="info">
+  <view class="source-and-date">
+    <text class="source">{{newsDetail.source ? newsDetail.source : "未知来源"}}</text>
+    <text class="date">{{newsDetail.date}}</text>
+  </view>
+  <text class="readCount">阅读 {{newsDetail.readCount}}</text>
+</view>
+<view class="content">
+  <block
+    wx:for="{{newsDetail.content}}"
+    wx:key="{{item.id}}"
+  >
+    <text 
+      class="text-content" 
+      wx:if="{{item.text}}"
+    >
+      {{item.text}}
+    </text>
+    <image
+      class="image-content"
+      wx:else src="{{item.src}}"
+      mode="aspectFill"
+    />
+  </block>
+</view>
