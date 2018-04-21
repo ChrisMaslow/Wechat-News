@@ -18,27 +18,28 @@
   </view>
 </view>
 
-<block 
-  class="news-list"
-  wx:for="{{newsList}}"
-  wx:key="{{item.id}}"
->
-  <view
-    class="news-item"
-    data-id="{{item.id}}"
-    bindtap='onTapNewsList'
+<scroll-view class="news-list" scroll-y="true">
+  <block 
+    wx:for="{{newsList}}"
+    wx:key="{{item.id}}"
   >
-    <view class="news-text">
-      <text class="title">{{item.title}}</text>
-      <view class="source-and-date">
-        <text class="source">{{item.source ? item.source : "未知来源"}}</text>
-        <text class="date">{{util.getTime(item.date)}}</text>
+    <view
+      class="news-item"
+      data-id="{{item.id}}"
+      bindtap='onTapNewsList'
+    >
+      <view class="news-text">
+        <text class="title">{{item.title}}</text>
+        <view class="source-and-date">
+          <text class="source">{{item.source ? item.source : "未知来源"}}</text>
+          <text class="date">{{util.getTime(item.date)}}</text>
+        </view>
       </view>
+      <image
+        class="first-image"
+        src="{{item.firstImage ? item.firstImage : noImage}}"
+        mode="aspectFill" 
+      />
     </view>
-    <image
-      class="first-image"
-      src="{{item.firstImage ? item.firstImage : noImage}}"
-      mode="aspectFill" 
-    />
-  </view>
-</block>
+  </block>
+</scroll-view>
