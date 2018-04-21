@@ -57,7 +57,8 @@ Page({
         })
       },
       complete: () => {
-        wx.hideLoading();
+        wx.hideLoading()
+        wx.stopPullDownRefresh()
       }
     })
   },
@@ -77,7 +78,6 @@ Page({
   onPullDownRefresh() {
     const { showingType } = this.data
     this.getNewsList(showingType)
-    wx.stopPullDownRefresh()
   },
 
   onTapNewsList(e) {

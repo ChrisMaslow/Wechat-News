@@ -1,6 +1,6 @@
 Page({
   data: {
-    newsDetail: ""
+    newsDetail: null
   },
 
   onLoad() {
@@ -29,11 +29,5 @@ Page({
         wx.hideLoading();
       }
     })
-  },
-
-  onPullDownRefresh() {
-    const { showingId } = getApp().globalData
-    this.getNewsDetail(showingId)
-    wx.stopPullDownRefresh()
   }
 })
