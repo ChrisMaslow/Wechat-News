@@ -74,7 +74,9 @@ Page({
     wx.stopPullDownRefresh()
   },
 
-  onTapNewsList() {
+  onTapNewsList(e) {
+    const { id } = e.currentTarget.dataset
+    getApp().globalData.showingId = id
     wx.navigateTo({
       url: '/pages/detail/detail',
     })

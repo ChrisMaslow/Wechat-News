@@ -18,8 +18,16 @@
   </view>
 </view>
 
-<block class="news-list" wx:for="{{newsList}}" wx:key="{{item.id}}">
-  <view class="news-item" bindtap='onTapNewsList'>
+<block 
+  class="news-list"
+  wx:for="{{newsList}}"
+  wx:key="{{item.id}}"
+>
+  <view
+    class="news-item"
+    data-id="{{item.id}}"
+    bindtap='onTapNewsList'
+  >
     <view class="news-text">
       <text class="title">{{item.title}}</text>
       <view class="source-and-date">

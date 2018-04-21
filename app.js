@@ -1,2 +1,6 @@
 //app.js
-App({})
+App({
+  globalData: {
+    showingId: 1523074607667
+  }
+})

@@ -1,11 +1,10 @@
 Page({
   data: {
-    showingId: 1523074607635,
     newsDetail: ""
   },
 
   onLoad() {
-    const { showingId } = this.data
+    const { showingId } = getApp().globalData
     this.getNewsDetail(showingId)
   },
 
@@ -24,5 +23,11 @@ Page({
         })
       }
     })
+  },
+
+  onPullDownRefresh() {
+    const { showingId } = getApp().globalData
+    this.getNewsDetail(showingId)
+    wx.stopPullDownRefresh()
   }
 })

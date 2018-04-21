@@ -20,7 +20,7 @@
     <image
       class="image-content"
       wx:else src="{{item.src}}"
-      mode="aspectFill"
+      mode="widthFix"
     />
   </block>
 </view>
