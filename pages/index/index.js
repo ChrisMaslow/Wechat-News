@@ -41,6 +41,9 @@ Page({
   },
 
   getNewsList(type) {
+    wx.showLoading({
+      title: "加载中"
+    })
     wx.request({
       url: 'https://test-miniprogram.com/api/news/list',
       data: {
@@ -52,6 +55,9 @@ Page({
         this.setData({
           newsList: result
         })
+      },
+      complete: () => {
+        wx.hideLoading();
       }
     })
   },

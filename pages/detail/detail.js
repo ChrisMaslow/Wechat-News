@@ -9,6 +9,9 @@ Page({
   },
 
   getNewsDetail(id) {
+    wx.showLoading({
+      title: "加载中"
+    })
     wx.request({
       url: 'https://test-miniprogram.com/api/news/detail',
       data: {
@@ -21,6 +24,9 @@ Page({
         this.setData({
           newsDetail: result
         })
+      },
+      complete: () => {
+        wx.hideLoading();
       }
     })
   },
