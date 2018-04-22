@@ -1,10 +1,4 @@
-<!--定义util.getTime来获取时间-->
-<wxs module="util">
-  var getTime = function(date) {
-    return date.substring(11, 16)
-  }
-  module.exports.getTime = getTime;
-</wxs>
+<wxs module="util" src="../getTime.wxs"/>
 
 <view class="nav-bar">
   <view

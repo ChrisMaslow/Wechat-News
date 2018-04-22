@@ -1,0 +1,5 @@
+//定义util.getTime来获取时间
+var getTime = function (date) {
+  return date.substring(11, 16)
+}
+module.exports.getTime = getTime;
