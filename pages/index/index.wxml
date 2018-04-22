@@ -7,12 +7,12 @@
 </wxs>
 
 <view class="nav-bar">
-  <view 
-    class='news-type'
+  <view
     wx:for="{{newsType}}"
     wx:key="{{item.type}}"
+    class="{{ (item.type === showingType) ? 'current-type' : 'news-type' }}"
     data-type="{{item.type}}"
-    bindtap='onTapNewsType'
+    bindtap="onTapNewsType"
   >
     {{item.name}}
   </view>
@@ -37,7 +37,7 @@
       </view>
       <image
         class="first-image"
-        src="{{item.firstImage ? item.firstImage : noImage}}"
+        src="{{item.firstImage ? item.firstImage : '/images/img_not_available.png'}}"
         mode="aspectFill" 
       />
     </view>

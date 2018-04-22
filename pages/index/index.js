@@ -30,7 +30,6 @@ Page({
         type: "other"
       }
     ],
-    noImage: "/images/img_not_available.png",
     showingType: "gn",
     newsList: []
   },
@@ -40,7 +39,7 @@ Page({
     this.getNewsList(showingType)
   },
 
-  getNewsList(type) {
+  getNewsList(type, callback) {
     wx.showLoading({
       title: "加载中"
     })
@@ -58,7 +57,7 @@ Page({
       },
       complete: () => {
         wx.hideLoading()
-        wx.stopPullDownRefresh()
+        callback && callback
       }
     })
   },
@@ -77,7 +76,7 @@ Page({
 
   onPullDownRefresh() {
     const { showingType } = this.data
-    this.getNewsList(showingType)
+    this.getNewsList(showingType, wx.stopPullDownRefresh())
   },
 
   onTapNewsList(e) {
