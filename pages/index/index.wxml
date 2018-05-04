@@ -1,10 +1,8 @@
-<wxs module="util" src="../getTime.wxs"/>
-
 <view class="nav-bar">
   <view
     wx:for="{{newsType}}"
     wx:key="{{item.type}}"
-    class="{{ (item.type === showingType) ? 'current-type' : 'news-type' }}"
+    class="{{ (item.type === showingType) ? 'current-type' : 'other-types' }}"
     data-type="{{item.type}}"
     bindtap="onTapNewsType"
   >
@@ -13,6 +11,18 @@
 </view>
 
 <scroll-view class="news-list" scroll-y="true">
+  <view class="head-line" style="background-image:url({{headLine.firstImage}})">
+    <view class="head-line-top">
+      <text class="hotspot">热门</text>
+    </view>
+    <view class="head-line-bottom">
+      <text class="head-line-title">{{headLine.title}}</text>
+      <view class="head-line-text">
+        <text class="source">{{headLine.source ? headLine.source : "未知来源"}}</text>
+        <text class="date">{{headLine.date}}</text>
+      </view>
+    </view>
+  </view>
   <block 
     wx:for="{{newsList}}"
     wx:key="{{item.id}}"
@@ -26,7 +36,7 @@
         <text class="title">{{item.title}}</text>
         <view class="source-and-date">
           <text class="source">{{item.source ? item.source : "未知来源"}}</text>
-          <text class="date">{{util.getTime(item.date)}}</text>
+          <text class="date">{{item.date}}</text>
         </view>
       </view>
       <image
