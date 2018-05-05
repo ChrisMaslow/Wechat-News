@@ -58,7 +58,7 @@ Page({
         this.setData({
           headLine: result[0]
         })
-        result.shift
+        result.shift()
         this.setData({
           newsList: result
         })
