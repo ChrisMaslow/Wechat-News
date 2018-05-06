@@ -31,7 +31,6 @@ Page({
       }
     ],
     showingType: "gn",
-    headLine: null,
     newsList: []
   },
 
@@ -52,13 +51,6 @@ Page({
       success: res => {
         console.log(res.data.result)
         let result = res.data.result
-        result.forEach( (news, index) => {
-          result[index].date = news.date.substring(11, 16)
-        })
-        this.setData({
-          headLine: result[0]
-        })
-        result.shift()
         this.setData({
           newsList: result
         })

@@ -3,50 +3,13 @@
   justify-content: space-between;
   font-size: 35rpx;
   line-height: 49rpx;
-  color:white;
-  background-color: darkblue;
+  color: crimson;
+  height: 75rpx;
   padding: 20rpx 35rpx;
 }
 
 .current-type {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-.head-line {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  margin: 35rpx;
-  height: 300rpx;
-}
-
-.hotspot {
-  width: 100rpx;
-  height: 50rpx;
-  text-align: center;
-  font-size: 30rpx;
-  color: white;
-  background-color: red;
-  opacity: 0.5;
-  border-bottom-left-radius: 30rpx;
-  
-}
-
-.head-line-top {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.head-line-bottom {
-  font-size: 25rpx;
-  line-height: 35rpx;
-  color: orange;
-  margin-top: 15rpx;
-}
-
-.head-line-title {
-  font-size: 30rpx;
-  line-height: 42.rpx;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .news-list {
@@ -56,7 +19,7 @@
 .news-item {
   display: flex;
   justify-content: space-between;
-  height: 150rpx;
+  height: 200rpx;
   padding: 20rpx 0rpx;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin: 0 35rpx;
@@ -91,6 +54,6 @@
 
 .first-image {
   width: 200rpx;
-  height: 130rpx;
+  height: 150rpx;
   border-radius: 5rpx;
 }

@@ -1,3 +1,5 @@
+<wxs src="./../utils.wxs" module="utils" />
+
 <view class="title">{{newsDetail.title}}</view>
 <view class="info">
   <view class="source-and-date">
